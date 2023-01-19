@@ -1,0 +1,73 @@
+github
+
+philagreo87@gmail.com
+                       nouveau********************              t85i5z39crpjmef
+phildid
+
+################################
+
+didelot.p@wanadoo.fr
+Z723hW4jWiPX6cp
+didou87
+
+*****************************************************************************************
+passphrase ssh = openclassroom
+***********************************
+demarer et ouvrir un fichier sur notepad depuis gitbash
+**********************************************************
+start notepad++ hello_from_remote
+**************************************
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:didou87/OpenclassroomProject.git
+git push -u origin main
+
+*****************************************************************************************************
+Pour lier votre dépôt local au dépôt distant, vous devez effectuer la commande :
+git remote add DEP 
+https://github.com/xxxxxx/monDepotDistant
+*****************************************************************************************************
+You can override any checks that git does by using "force push". Use this command in terminal
+
+    git push -f origin main
+
+
+
+***************************************************
+You can try this: git pull origin main --rebase
+
+***************************************
+1- git remote add origin <your repo URL>
+2- git pull origin main
+3- git push origin main
+********************************************
+
+
+You could simply and safely revert the changes made by your colleague. using the git revert command.
+
+git revert commit-hash
+**************************************
+hash can be found with the following command.
+
+git log
+
+**********************************************************
+If you're working on a large feature and you've done lots of changes but you want to keep your files uncommitted because it's handy sometimes to do so. stashing is your friend.
+
+git stash > Will temporary store your changes locally until you do a 
+git stash pop >  which will retrieve and apply the changes for you.
+
+pulling a branch in between stash operations will not trigger conflict assuming your branch is close to the shared one. otherwise, you're back at step one.
+
+My third and final little secret are diff files.
+**************************************************
+git checkout -b branch_a
+git diff dev..branch_a > changes.diff
+git apply changes.diff
+**************************************************
+What it basically does is that it compares the difference between two branches and creates a file called changes.diff it will show all the changes made by your colleague and will help you decide what to keep or remove
+
+Btw! you can do a merge --abort to cancel m
